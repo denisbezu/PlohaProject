@@ -1,0 +1,79 @@
+@import "~bootstrap/scss/bootstrap";
+
+.top-header {
+  .left-block {
+    flex: 1 1 30%;
+    margin-left: -20px;
+  }
+
+  .right-block {
+    flex: 1 1 70%;
+  }
+
+  .menu {
+    justify-content: space-between;
+
+    .menu-item {
+      font-size: 24px;
+      align-items: center;
+      cursor: pointer;
+      color: #212529;
+    }
+  }
+}
+
+.main-block {
+  min-height: 1000px;
+
+  .block-item {
+
+  }
+}
+
+.footer-line {
+  height: 10px;
+  background: #1f4fa1;
+}
+
+#contact-us {
+  background-color: #0176A3;
+
+  .contact-sub-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .right-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+
+  .address-text {
+    max-width: 350px;
+  }
+
+  .img-map {
+    width: 100%;
+  }
+
+  .submit-btn {
+    background-color: #C4C4C4;
+    color: #333;
+  }
+
+  .svg-wrapper  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}
+
+.block-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  color: #ffffff;
+}
