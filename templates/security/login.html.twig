@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+    <div class="row m-0 py-5 my-5 justify-content-center">
+        <div class="login-block w-100 p-4">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <h1 class="h3 mb-3 font-weight-normal text-center">Вхід</h1>
+                <div class="d-flex">    
+                    <div class="left-login px-3 pb-3">
+                        <img src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103597_960_720.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="right-login">
+                        <div class="form-group">
+                            <label for="inputEmail" class="sr-only">Email</label>
+                            <input type="email" value="{{ last_username }}"
+                                   name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                        </div>
+                        <div class="form-group pb-3">
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" name="password"
+                                   id="inputPassword" class="form-control" placeholder="Пароль" required>
+                        </div>
+
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+
+                        {#
+                            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                            See https://symfony.com/doc/current/security/remember_me.html
+
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" name="_remember_me"> Remember me
+                                </label>
+                            </div>
+                        #}
+
+                        <div class="button-wrapper w-100 border-top d-flex justify-content-end">
+                            <a class="btn btn-lg btn-default text-uppercase" href="/register">
+                                Реєстрація
+                            </a>
+                            <button class="btn btn-lg btn-default text-uppercase    " type="submit">
+                                Вхід
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

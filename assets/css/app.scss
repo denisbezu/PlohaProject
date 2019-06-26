@@ -2,12 +2,12 @@
 
 .top-header {
   .left-block {
-    flex: 1 1 30%;
+    flex: 1 1 20%;
     margin-left: -20px;
   }
 
   .right-block {
-    flex: 1 1 70%;
+    flex: 1 1 80%;
   }
 
   .menu {
@@ -23,9 +23,23 @@
 }
 
 .main-block {
-  min-height: 1000px;
+  min-height: 550px;
 
   .block-item {
+
+  }
+
+  .login-block {
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    .left-login {
+      flex: 1 1 30%;
+    }
+
+    .right-login {
+      flex: 1 1 70%;
+    }
 
   }
 }
@@ -33,6 +47,15 @@
 .footer-line {
   height: 10px;
   background: #1f4fa1;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+.top-menu {
+  color: #333;
+  text-decoration: none;
 }
 
 #contact-us {
@@ -63,7 +86,7 @@
     color: #333;
   }
 
-  .svg-wrapper  {
+  .svg-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
